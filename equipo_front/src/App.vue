@@ -3,9 +3,9 @@
   <!-- NO ES NECESARIO TOCAR ESTE ARCHIVO -->
 
   <nav>
-    <router-link to="/">VISTA1</router-link> |
-    <router-link to="/vista2">VISTA2</router-link> |
-    <router-link to="/vista3">VISTA3</router-link>
+    <router-link to="/">DATOS Y TABLAS</router-link> |
+    <router-link to="/vista2">FICHA TECNICA</router-link> |
+    <router-link to="/vista3">CONTACTO</router-link>
   </nav>
   <router-view/>
 </template>

@@ -1,14 +1,34 @@
 <template>
+    <!-- ENCARGADOS VISTA 1:SOFIA, ERIKA, ALEXANDRA   -->
+
   <div class="about">
-    <h1>This is an about page</h1>
+    <HelloWorld msg="FICHA TECNICA"/>
   </div>
 
-  ACÁ EL HTML DE LA VISTA 2
+  
 
 </template>
 
 <script>
+import HelloWorld from '@/components/HelloWorld.vue';
+import TableHead from '@/components/TableHead.vue';
+
+
+export default {
+  name: 'Vista2',
+  //ACÁ SE AGREGAN LAS COMPONENTES QUE VAMOS A UTILIZAR
+  components: {
+    HelloWorld,
+    TableHead,
+  },
+}
 </script>
 
 <style>
+.historical {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid greenyellow;
+}
 </style>

@@ -6,8 +6,8 @@
 <!-- Titulo -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <HelloWorld class="tituloPri" msg="Estación meteorologica - UIS"/>
   <div class="Header">
     <img alt="estacion" class="imgPri" src="../imagenes_vista2/estacion.jpg">
@@ -158,21 +158,24 @@
 
   </tbody>
 </table>
-
+ <Footer/>
 </template>
 
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue';
 import TableHead from '@/components/TableHead.vue';
+import Footer from '@/components/Footer.vue';
+
 
 
 export default {
-  name: 'Vista2',
+  name: 'vista2',
   //ACÁ SE AGREGAN LAS COMPONENTES QUE VAMOS A UTILIZAR
   components: {
     HelloWorld,
     TableHead,
+    Footer,
   },
 }
 </script>
@@ -316,8 +319,19 @@ table{
   border: 3px solid greenyellow;
 }
 
-*{color:#03242D;
+*{
 font-family: 'Lato', sans-serif;
+}
+
+
+footer {
+  clear: both;
+	padding: 10px;
+	text-align: center;
+	border-top: 5px solid #4AA873;
+  border-bottom: 5px solid #4AA873;
+  background: #004D53;
+  color: white;
 }
 
 </style>

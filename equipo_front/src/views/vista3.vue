@@ -58,9 +58,7 @@
 <p>+57 (607) 634 4000</p>
     </section>
 
-    <footer>
-      <p>Estación Meteorológica UIS By Estudiantes UIS</p>
-    </footer>
+    <Footer/>
   </main>
 </body>
 </html>
@@ -70,7 +68,20 @@
 
 
 <script>
+import HelloWorld from '@/components/HelloWorld.vue';
+import TableHead from '@/components/TableHead.vue';
+import Footer from '@/components/Footer.vue';
 
+
+export default {
+  name: 'vista3',
+  //ACÁ SE AGREGAN LAS COMPONENTES QUE VAMOS A UTILIZAR
+  components: {
+    HelloWorld,
+    TableHead,
+    Footer,
+  },
+}
 </script>
 
 
@@ -139,24 +150,7 @@ ul li a:hover {
   transform: scale(1.2);
 }
 
-footer {
-  width: 100%;
-  height: 80px;
-  background: #314652;
-  color: white;
-  position: relative;
-}
 
-footer::before {
-  content: '';
-  position: absolute;
-
-  top: 0;
-}
-
-footer p {
-  padding: 30px;
-}
 .container-card{
 	width: 100%;
 	display: flex;

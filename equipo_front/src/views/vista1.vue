@@ -71,6 +71,7 @@ export default {
   data() {
     return {
       STATIONS : [],
+      REPORT : [],
       Header_table : ['ESTACIÓN','Temperatura','Humedad','Material Particulado','UV','CO2','FECHA'],
       start: '',
       stop: '',
@@ -140,7 +141,7 @@ export default {
     updated() {
       
     },
-    report(){
+    async report(){
       let date_start;
       let date_stop;
       let start_date;
@@ -173,7 +174,18 @@ export default {
         stop_hour = date_stop[1].split(':')[0],
         stop_minute = date_stop[1].split(':')[1],
       ],
-      console.log(start_date,stop_date)
+      console.log(start_date,stop_date);
+
+      // const station = this.thingspeak_data[index].Channel_ID;
+      const id = this.thingspeak_data[index].Channel_ID;
+      const key = this.thingspeak_data[index].API_Key;
+
+      // Get other properties of station
+      const response = await fetch(
+          // `https://api.thingspeak.com/channels/${id}/feeds.json?api_key=${key}&results=1` +
+          //     "&timezone=America%2FBogota&status=true"
+          `https://api.thingspeak.com/channels/${id}/feeds.json?api_key=${key}&results=10`
+      );
     }
 
   },
@@ -194,7 +206,7 @@ table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid greenyellow;
+  border: 3px solid green;
 }
 
 

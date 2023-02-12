@@ -158,15 +158,15 @@
 
   </tbody>
 </table>
- <footer>
-      <p>Estación Meteorológica UIS By Estudiantes UIS</p>
-    </footer>
+ <Footer/>
 </template>
 
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue';
 import TableHead from '@/components/TableHead.vue';
+import Footer from '@/components/Footer.vue';
+
 
 
 export default {
@@ -175,6 +175,7 @@ export default {
   components: {
     HelloWorld,
     TableHead,
+    Footer,
   },
 }
 </script>

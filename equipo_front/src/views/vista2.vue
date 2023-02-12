@@ -318,17 +318,19 @@ table{
   border: 3px solid greenyellow;
 }
 
-*{color:#03242D;
+*{
 font-family: 'Lato', sans-serif;
 }
 
+
 footer {
   clear: both;
-	padding: 30px;
+	padding: 10px;
 	text-align: center;
 	border-top: 5px solid #4AA873;
+  border-bottom: 5px solid #4AA873;
+  background: #004D53;
+  color: white;
 }
-
-
 
 </style>

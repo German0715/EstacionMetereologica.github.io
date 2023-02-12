@@ -37,7 +37,7 @@
   <!-- <DatePicker/> -->
 
   <form @submit.prevent="reporte">
-    <label>Seleccione la Estacion-Meteorologica-UIS de la cuá desea Traer un Reporte:</label>
+    <label>Seleccione la Estacion-Meteorologica-UIS de la cual desea Traer un Reporte:</label>
     <select  v-model="select_stations">
       <option v-for="(station, index) in STATIONS" :key="station.index">{{ station.name }}</option>
       <!-- <option>Todas</option> -->
@@ -50,6 +50,7 @@
       <button @click="report"><label id="selecor_option">Traer Reportes del {{ start }} a {{ stop }}</label></button>
     </div>
   </form>
+  {{ REPORT }}
   
 
 
@@ -190,9 +191,27 @@ export default {
         }
       }else{
         console.log('SELECCIONE ALGUNA ESTACION');
-      }  
+      }
+      this.REPORT.push({
+        name: data_report.channel.name,
+        id: data_report.channel.id,
+        location: [data_report.channel.latitude, data_report.channel.longitude],
+      }) 
+      for (let index = 0; index < data_report.feeds.length; index++) {
+        this.REPORT.push({
+        data : {
+          time : data_report.feeds[index].created_at,
+          Temperatura : data_report.feeds[index].field1,
+          Humedad : data_report.feeds[index].field2,
+          Material_Particulado : data_report.feeds[index].field3,
+          UV : data_report.feeds[index].field4,
+          CO2 : data_report.feeds[index].field5,
+        }
+      })        
+      }
       
-      console.log(this.select_stations,start_date,stop_date,data_report);
+      
+      console.log(this.select_stations,start_date,stop_date,data_report,this.REPORT);
     }
   },
   //DIRECTIVA PARA CRGAR INFORMACION A LA PÁGINA ANTES DEL TEMPLATE

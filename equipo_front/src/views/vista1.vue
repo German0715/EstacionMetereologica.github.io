@@ -114,7 +114,7 @@ export default {
       const response = await fetch(
           // `https://api.thingspeak.com/channels/${id}/feeds.json?api_key=${key}&results=1` +
           //     "&timezone=America%2FBogota&status=true"
-          `https://api.thingspeak.com/channels/${id}/feeds.json?api_key=${key}&results=10`
+          `https://api.thingspeak.com/channels/${id}/feeds.json?api_key=${key}&results=1`
       );
       const data = await response.json();
       const { name, latitude, longitude, updated_at } = data.channel;

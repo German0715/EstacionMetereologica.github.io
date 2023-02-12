@@ -1,14 +1,35 @@
 <template>
-
   <!-- NO ES NECESARIO TOCAR ESTE ARCHIVO -->
+  <!-- <navbar /> -->
 
   <nav>
-    <router-link to="/">DATOS Y TABLAS</router-link> |
-    <router-link to="/vista2">FICHA TECNICA</router-link> |
-    <router-link to="/vista3">CONTACTO</router-link>
+    <div class="inicio">
+      <router-link to="/">INICIO</router-link> |
+    </div>
+    <div class="nav-links">
+      <router-link to="/vista1">DATOS Y TABLAS</router-link> |
+      <router-link to="/vista2">FICHA TECNICA</router-link> |
+      <router-link to="/vista3">CONTACTO</router-link>
+    </div>
   </nav>
+
   <router-view/>
 </template>
+
+<script>
+
+  import Navbar from "./components/Navbar"
+
+  export default {
+
+   components: {
+      Navbar
+   }
+    
+  }
+
+
+</script>
 
 <style>
 #app {
@@ -29,6 +50,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #4AA873;
 }
 </style>

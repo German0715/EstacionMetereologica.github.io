@@ -49,7 +49,7 @@
       <input type="datetime-local" v-model="stop" ><br><br>
       <button @click="report"><label id="selecor_option">Traer Reportes del {{ start }} a {{ stop }}</label></button>
     </div>
-  </form>
+  </form><br><br>
   
 <Footer/>
 

@@ -1,11 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/vista1.vue'
+import HomeView from '../views/vista0.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'vista1',
+    name: 'vista0',
     component: HomeView
+    
+  },
+  {
+    path: '/vista1',
+    name: 'vista1',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/vista1.vue')
   },
   {
     path: '/vista2',

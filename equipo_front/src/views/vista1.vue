@@ -9,7 +9,7 @@
     <img alt="Vue logo" src="../assets/estacion_ejemplo.jpg">
 
     <!-- ASÍ SE AGREGA UN COMPONENTE, EL msg ES LA INFORMACIÓN QUE LE ENVIAMOS AL COMPONENTE -->
-    <HelloWorld msg="ULTIMOS DATOS Y TABLAS"/> 
+    <HelloWorld msg="ULTIMA ACTUALIZACION"/> 
   </div>
   <div class="table-responsive" >
     <table class="table table-primary">
@@ -34,6 +34,7 @@
     </table>
   </div>
 
+  <HelloWorld msg="REPORTES HISTORICOS"/> 
   <!-- <DatePicker/> -->
 
   <form @submit.prevent="reporte">

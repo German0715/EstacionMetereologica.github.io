@@ -12,7 +12,7 @@
 <script>
 // ASÍ ES COMO RECIBIMOS LOS DATOS EN DE UN COMPONENTE parenthesizedExpression, EN ESTE CASO LA VISTA1
 export default {
-  name: 'TableHead',
+  name: 'DatePicker',
   props: {
   },
   data() {

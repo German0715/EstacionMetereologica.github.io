@@ -123,7 +123,7 @@ export default {
     report(){
       
       console.log(this.start, this.stop);
-   }
+    }
 
   },
   //DIRECTIVA PARA CRGAR INFORMACION A LA PÁGINA ANTES DEL TEMPLATE

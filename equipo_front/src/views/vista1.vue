@@ -50,9 +50,8 @@
       <button @click="report"><label id="selecor_option">Traer Reportes del {{ start }} a {{ stop }}</label></button>
     </div>
   </form>
-  {{ REPORT }}
   
-
+<Footer/>
 
 </template>
 
@@ -62,6 +61,8 @@
 import HelloWorld from '@/components/HelloWorld.vue';
 import TableHead from '@/components/TableHead.vue';
 import DatePicker from '@/components/DatePicker.vue';
+import Footer from '@/components/Footer.vue';
+
 // import { response } from 'express';
 
 export default {
@@ -71,6 +72,7 @@ export default {
     HelloWorld,
     TableHead,
     DatePicker,
+    Footer,
   },
   //ACÁ SE AGREGAN LOS DATOS ESTÁTICOS DE LA VISTA
   data() {
@@ -193,9 +195,11 @@ export default {
         console.log('SELECCIONE ALGUNA ESTACION');
       }
       this.REPORT.push({
-        name: data_report.channel.name,
-        id: data_report.channel.id,
-        location: [data_report.channel.latitude, data_report.channel.longitude],
+        station_info: {
+          name: data_report.channel.name,
+          id: data_report.channel.id,
+          location: [data_report.channel.latitude, data_report.channel.longitude],
+        }
       }) 
       for (let index = 0; index < data_report.feeds.length; index++) {
         this.REPORT.push({

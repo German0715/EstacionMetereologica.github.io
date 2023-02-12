@@ -158,7 +158,9 @@
 
   </tbody>
 </table>
-
+ <footer>
+      <p>Estación Meteorológica UIS By Estudiantes UIS</p>
+    </footer>
 </template>
 
 
@@ -319,5 +321,14 @@ table{
 *{color:#03242D;
 font-family: 'Lato', sans-serif;
 }
+
+footer {
+  clear: both;
+	padding: 30px;
+	text-align: center;
+	border-top: 5px solid #4AA873;
+}
+
+
 
 </style>

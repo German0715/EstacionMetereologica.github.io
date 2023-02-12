@@ -38,14 +38,16 @@
 
   <!-- <DatePicker/> -->
 
-  <div class="selector_fecha">
-      <label id="selecor_option">Seleccione la fecha en que desea los Reportes</label><br>
-      <h4>Start DATE</h4>
-      <input type="datetime-local" id="start" min="2023-02-01">
-      <h4>Stop DATE</h4>
-      <input type="datetime-local" id="stop" value="2023-05-06">
-      <button @click="report">Traer Reporte</button>
-</div>
+  <form @submit.prevent="reporte">
+    <div class="selector_fecha">
+      <label>Start Date:</label>
+      <input type="datetime-local" v-model="start">
+      <label>Stop Date</label>
+      <input type="datetime-local" v-model="stop" ><br><br>
+      <button @click="report"><label id="selecor_option">Traer Reportes del {{ start }} a {{ stop }}</label></button>
+    </div>
+  </form>
+  
 
 
 </template>
@@ -70,9 +72,8 @@ export default {
     return {
       STATIONS : [],
       Header_table : ['ESTACIÓN','Temperatura','Humedad','Material Particulado','UV','CO2','FECHA'],
-      // start : new Date('2023-02-06'),
-      // stop : new Date('2023-05-06'),
-      fechaSeleccionada: null
+      start: '',
+      stop: '',
     }
   },
   //ACÁ LAS FUNCIONES ESTÁTICAS DE LA VISTA
@@ -119,19 +120,17 @@ export default {
     updated() {
       
     },
-    
+    report(){
+      
+      console.log(this.start, this.stop);
+   }
 
   },
   //DIRECTIVA PARA CRGAR INFORMACION A LA PÁGINA ANTES DEL TEMPLATE
   created() {
     this.setup();
   },
-  data_report(){
-      let start_Date = document.getElementById("start").value;
-      let stop_Date = document.getElementById("stop").value;
-      // let tag = (rtipo=="Total" || rtipo=="Top")? null:document.getElementById(rtipo).value;
-      console.log(stop_Date, start_Date);
-   }
+
 }
 </script>
 

@@ -11,6 +11,14 @@
 </template>
 
 <script>
+<<<<<<< HEAD
+=======
+    export default {
+
+    }
+
+
+>>>>>>> main
 </script>
 
 <style>

@@ -12,6 +12,30 @@
 
 </head>
 <body>
+  <h3>Nuestra gente:</h3>
+  <div class="container-card">
+	
+  <div class="card">
+    <figure>
+      <img src="../assets/img1.jpg">
+    </figure>
+    <div class="contenido-card">
+      <h3>GRUPO B1</h3>
+      <p>Estudiantes del programa de Ingeniería Electronica de la Universidad Industrial de Santander, matriculados al curso de Instrumentación Electrónica (Grupo B1), dirigidos por el profesor Julián Rodríguez. <br>Para más información, visite su sitio web.</p>
+      <a href="https://sites.google.com/e3t.uis.edu.co/proyecto-semestre-grupo-b1-y-b/equipo" target="_blank">Leer más </a>
+    </div>
+  </div>
+  <div class="card">
+	<figure>
+		<img src="../assets/grupod1.jpg">
+	</figure>
+	<div class="contenido-card">
+		<h3>GRUPO D1</h3>
+		<p>Estudiantes del programa de Ingeniería Electronica de la Universidad Industrial de Santander, matriculados al curso de Instrumentación Electrónica (Grupo D1), dirigidos por el profesor Julián Rodríguez. <br>Para más información, visite su sitio web.</p>
+		<a href="https://sites.google.com/e3t.uis.edu.co/proyectod1d2/equipos" target="_blank">Leer más</a>
+	</div>
+</div>
+</div>
   <main class="nosotros">
     <header>
       
@@ -62,7 +86,7 @@
 
 header {
   width: 100%;
-  height: 200px;
+  height: 50px;
   overflow: hidden;
   position: relative;
 }
@@ -71,13 +95,13 @@ header::before {
   content: '';
   position: absolute;
   border-top: 30px solid transparent;
-  border-left: 400px solid white;
+  border-left: 100px solid white;
   bottom: 0;
 }
 
 header img {
   width: 100%;
-  height: 199px;
+  height: 100px;
 }
 
 section {
@@ -132,5 +156,75 @@ footer::before {
 
 footer p {
   padding: 30px;
+}
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+.title-cards{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: #7a7a7a;
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #7a7a7a;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #2fb4cc;
+	color: #fff;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
 }
 </style>

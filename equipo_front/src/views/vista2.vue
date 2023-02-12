@@ -1,9 +1,12 @@
 <template>
-    <!-- ENCARGADOS VISTA 1:SOFIA, ERIKA, ALEXANDRA   -->
+    <!-- ENCARGADOS VISTA 1:SOFIA, ERIKA   -->
 
 <!-- HTML -->
 
 <!-- Titulo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <HelloWorld class="tituloPri" msg="Estación meteorologica - UIS"/>
   <div class="Header">
@@ -80,7 +83,7 @@
       <td><img alt="resis" class="resis" src="../imagenes_vista2/Resistencia.jpg"></td>
       <td><br>100 ohm <br><br> 1 kohm</td>
       <td><br>1 <br><br> 1</td>
-      <td>@mdo</td>
+      <td>400 COP</td>
     </tr>
     <tr>
       <th scope="row">2</th>
@@ -88,7 +91,7 @@
       <td><img alt="switch" class="switch" src="../imagenes_vista2/switch.png"></td>
       <td>3 conectores</td>
       <td>1</td>
-      <td>@mdo</td>
+      <td>1.500 COP</td>
     </tr>
     <tr>
       <th scope="row">3</th>
@@ -96,7 +99,7 @@
       <td><img alt="regula" class="regula" src="../imagenes_vista2/regulador.jpg"></td>
       <td><br>L7805CV <br><br> LM1117T-ADJ</td>
       <td><br>1 <br><br> 1</td>
-      <td>@mdo</td>
+      <td><br> 1.100 COP<br><br>5.500 COP </td>
     </tr>
 
     <tr>
@@ -105,7 +108,7 @@
       <td><img alt="diodo" class="diodo" src="../imagenes_vista2/diodo_zenner.jpg"></td>
       <td>Tension de 12 V</td>
       <td>1</td>
-      <td>@mdo</td>
+      <td>154,70 COP</td>
     </tr>
 
     <tr>
@@ -114,7 +117,7 @@
       <td><img alt="led" class="led" src="../imagenes_vista2/diodo_led.jpg"></td>
       <td>Luz roja</td>
       <td>1</td>
-      <td>@mdo</td>
+      <td>100 COP</td>
     </tr>
 
     <tr>
@@ -123,7 +126,7 @@
       <td><img alt="ceramico" class="ceramico" src="../imagenes_vista2/Cap_ceramico.jpg"></td>
       <td>0.1 uF</td>
       <td>1</td>
-      <td>@mdo</td>
+      <td>200 COP</td>
     </tr>
 
     <tr>
@@ -132,7 +135,7 @@
       <td><img alt="conde" class="conde" src="../imagenes_vista2/condensador-electrolitico.jpg"></td>
       <td><br>10 uF <br><br> 220 nF</td>
       <td><br>1 <br><br> 1</td>
-      <td>@mdo</td>
+      <td><br>  300 COP<br><br>200 COP </td>
     </tr>
 
     <tr>
@@ -141,7 +144,7 @@
       <td><img alt="regleta" class="regleta" src="../imagenes_vista2/regleta-macho-macho.jpg"></td>
       <td>Macho-macho</td>
       <td>1</td>
-      <td>@mdo</td>
+      <td>500 COP</td>
     </tr>
 
     <tr>
@@ -150,7 +153,7 @@
       <td><img alt="regleta2" class="regleta2" src="../imagenes_vista2/Regleta-machoHembra.jpg"></td>
       <td>Macho-hembra</td>
       <td>1</td>
-      <td>@mdo</td>
+      <td>1.000 COP</td>
     </tr>
 
   </tbody>
@@ -309,8 +312,12 @@ export default {
   height: 150px;
 }
 
-table th{
-  background-color: #4AA873;
+table{
+  border: 3px solid greenyellow;
+}
+
+*{color:#03242D;
+font-family: 'Lato', sans-serif;
 }
 
 </style>

@@ -106,7 +106,7 @@ header::before {
   content: '';
   position: absolute;
   border-top: 30px solid transparent;
-  border-left: 100px solid white;
+  border-left: 100px solid rgb(255, 255, 255);
   bottom: 0;
 }
 
@@ -211,7 +211,7 @@ ul li a:hover {
 }
 .card .contenido-card a:hover{
 	background: #2fb4cc;
-	color: #fff;
+	color: #a10a0a;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
 	.container-card{

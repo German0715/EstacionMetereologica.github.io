@@ -1,15 +1,35 @@
 <template>
   <!-- NO ES NECESARIO TOCAR ESTE ARCHIVO -->
-  <div class="inicio">
-      <button><router-link to="/">Inicio</router-link></button>
-    <div class="nav-links">
-        <button><router-link to="/vista1">Datos</router-link></button>
-        <button><router-link to="/vista2">Ficha Técnica</router-link> </button>
-        <button><router-link to="/vista3">Nosotros</router-link></button>
-      </div>
+  <!-- <navbar /> -->
+
+  <nav>
+    <div class="inicio">
+      <router-link to="/">INICIO</router-link> |
     </div>
+    <div class="nav-links">
+      <router-link to="/vista1">DATOS Y TABLAS</router-link> |
+      <router-link to="/vista2">FICHA TECNICA</router-link> |
+      <router-link to="/vista3">CONTACTO</router-link>
+    </div>
+  </nav>
+
   <router-view/>
 </template>
+
+<script>
+
+  import Navbar from "./components/Navbar"
+
+  export default {
+
+   components: {
+      Navbar
+   }
+    
+  }
+
+
+</script>
 
 <style>
 #app {
@@ -32,7 +52,7 @@ nav a {
 nav a.router-link-exact-active {
   color: #4AA873;
 }
-button {
+/* button {
  --color: #244053;
  font-family: Helvetica;
  display: inline-block;
@@ -94,5 +114,5 @@ button:active:before {
 .inicio{
   display: flex;
   justify-content: left;
-}
+} */
 </style>

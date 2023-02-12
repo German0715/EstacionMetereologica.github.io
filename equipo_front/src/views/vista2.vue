@@ -170,7 +170,7 @@ import TableHead from '@/components/TableHead.vue';
 
 
 export default {
-  name: 'Vista2',
+  name: 'vista2',
   //ACÁ SE AGREGAN LAS COMPONENTES QUE VAMOS A UTILIZAR
   components: {
     HelloWorld,
